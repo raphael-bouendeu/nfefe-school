@@ -25,17 +25,17 @@
     <div class="card z-depth-2">
       <% if !@joined %>
         <div class="center">
-          <h1><%= @project.price == 0? "Free" : "$#{@project.price}" %></h1>
+          <h1><%= @project.price == 0? "Free" : "gratuit pour l instant" %></h1>
         </div>
         <div class="card-action center">
           <% if user_signed_in? %>
             <%= form_with url:free_path, model: @project  do %>
               <%= hidden_field_tag 'project_id' ,@project.id %>
-              <button type="submit" class="btn pink darken-2">Take this Project</button>
+              <button type="submit" class="btn pink darken-2">Prenez ce cours</button>
             <% end %>
           <% else %>
             <%= link_to new_user_session_path do %>
-              <button type="submit" class="btn pink darken-2">Take this Project</button>
+              <button type="submit" class="btn pink darken-2">Prenez ce cours</button>
             <% end %>
           <% end %>
         </div>
