@@ -1,16 +1,20 @@
-<nav class = "brown ligthen-4 z-depth-2">
+<nav class = "light-blue darken-1 z-depth-2">
   <div class="container">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">CodePro</a>
+    <%= link_to 'Nzingu', root_path,class:"brand-logo" %>
+
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Courses</a></li>
+        <li>
+        <%= link_to 'Courses', project_index_path %>
+        </li>
+         <li><a href="<%= pages_about_path %>">A Propos</a></li>
         <% if !user_signed_in? %>
           <li> <%= link_to 'Sign Up', new_user_registration_path %></li>
           <li><%= link_to 'Login', new_user_session_path %></li>
         <% else %>
           <li><a class="dropdown-trigger valign-wrapper" href="#!" data-target="dropdown1">
-              <%= image_tag gravatar_url(current_user.email,40),class:"circle responsive-img" %>&nbsp;
+              <%= image_tag avatar_url(current_user),class:"circle responsive-img" %>&nbsp;
               <%=current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
         <% end %>
       </ul>
@@ -18,13 +22,14 @@
   </div>
 </nav>
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="#">Courses</a></li>
+  <li>  <%= link_to 'Courses', project_index_path %></li>
+   <li><a href="<%= pages_about_path %>">A Propos</a></li>
   <% if !user_signed_in? %>
     <li> <%= link_to 'Sign Up', new_user_registration_path %></li>
     <li><%= link_to 'Login', new_user_session_path %></li>
   <% else %>
     <li><a class="dropdown-trigger valign-wrapper" href="#!" data-target="dropdown2">
-        <%= image_tag gravatar_url(current_user.email,40),class:"circle responsive-img" %>&nbsp;
+        <%= image_tag avatar_url(current_user),class:"circle responsive-img" %>&nbsp;
         <%=current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
   <% end %>
 </ul>

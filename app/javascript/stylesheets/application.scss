@@ -10,3 +10,36 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.container {
+  width: 95%;
+}
+
+.card-image-list {
+  height: 250px; /* Your height here */
+
+  overflow: hidden;
+}
+
+.card-custom {
+  height: 350px;
+  overflow: hidden;
+}
+
+.card-image-display {
+  height: 300px; /* Your height here */
+
+  overflow: hidden;
+}
+
+.avatar-small {
+  width: 50px;
+}
+
+.avatar-medium {
+  width: 80px;
+}
+
+.mask {
+  z-index: 99;
+}

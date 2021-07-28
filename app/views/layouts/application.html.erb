@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= yield :head %>
+    <script src="//load.sumome.com/" data-sumo-site-id="2ff25a90bb5d155a641e29a94e557e3bf73e6420d2ba8f96e14f33f80709c5fb" async="async"></script>
+    <!--Start of Zopim Live Chat Script-->
+    <!-- Start of itbcafrica Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=9cb4e210-e74a-4310-b052-1dff65426009"> </script>
+<!-- End of itbcafrica Zendesk Widget script -->
+
+    <!--End of Zopim Live Chat Script-->
   </head>
   <body>
     <%= render 'layouts/dropdown' %>
-
     <header>
-    <%=render 'layouts/navbar'%>
-    <%= render 'layouts/message' %>
+      <%=render 'layouts/navbar'%>
+      <%= render 'layouts/message' %>
     </header>
-
     <main>
       <div class="container">
         <%= yield %>
