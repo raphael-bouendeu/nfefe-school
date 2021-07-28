@@ -10,7 +10,9 @@
         <%= f.password_field :password, :id => "email", :class => "validate", :placeholder => "Password", autocomplete: "off" %>
       </div>
       <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
-
+      <br/>
+      <br/>
+      <%= link_to 'Sign Up', new_user_registration_path,class:"btn waves-effect waves-light"  %>
     <% end %>
   </div>
 </div>
