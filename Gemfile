@@ -30,7 +30,7 @@ group :test do
   gem 'webdrivers'
 end
   gem 'materialize-sass'
-
+gem 'rails_12factor', group: :production
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.2'
 gem 'omniauth', '~> 2.0', '>= 2.0.4'
